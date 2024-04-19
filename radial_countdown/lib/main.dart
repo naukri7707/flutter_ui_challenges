@@ -23,7 +23,7 @@ class MainApp extends StatelessWidget {
                   text: 'CircularProgressIndicator',
                 ),
                 Tab(
-                  text: 'Painter',
+                  text: 'CustomPainter',
                 ),
               ],
             ),

@@ -4,9 +4,15 @@ class CountdownRing extends StatelessWidget {
   const CountdownRing({
     super.key,
     required this.remainingRatio,
+    required this.backgroundColor,
+    required this.foregroundColor,
   });
 
   final double remainingRatio;
+
+  final Color backgroundColor;
+
+  final Color foregroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +32,8 @@ class CountdownRing extends StatelessWidget {
             value: remainingRatio,
             // 加粗進度條
             strokeWidth: ringStrokeWidth,
-            backgroundColor: Colors.purple,
-            valueColor: const AlwaysStoppedAnimation(Colors.indigo),
+            backgroundColor: backgroundColor,
+            valueColor: AlwaysStoppedAnimation(foregroundColor),
           ),
         ),
       );

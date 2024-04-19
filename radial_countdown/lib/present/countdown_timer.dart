@@ -56,6 +56,8 @@ class CountdownTimerState extends State<CountdownTimer>
 
   @override
   Widget build(BuildContext context) {
+    var ringBackgroundColor = Colors.purple;
+    var ringForegroundColor = Colors.indigo;
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -66,10 +68,14 @@ class CountdownTimerState extends State<CountdownTimer>
             if (widget.drawRingByPainter)
               CountdownRing(
                 remainingRatio: remainingTimeRatio,
+                backgroundColor: ringBackgroundColor,
+                foregroundColor: ringForegroundColor,
               )
             else
               CountdownRingByPainter(
                 remainingRatio: remainingTimeRatio,
+                backgroundColor: ringBackgroundColor,
+                foregroundColor: ringForegroundColor,
               ),
             RemainingTimeText(
               remainingTime: remainingTime,
